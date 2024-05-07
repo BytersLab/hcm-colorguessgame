@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Itim;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Itim;
+  src: url("./src/fonts/Itim-Regular.ttf"), type("truetype");
+}
+
+:root {
+  --color1: #373f51;
+  --color2: #61e786;
+  --color3: #f19a3e;
+  --color4: #d81e5b;
+  --color5: #d8dbe2;
+  --color6: #3f84e5;
+  --color7: #303642;
+  --boxshadow1: 2px 1px 5px 0 rgba(0, 0, 0, 0.24),
+    8px 6px 10px 0 rgba(0, 0, 0, 0.21), 17px 13px 13px 0 rgba(0, 0, 0, 0.12),
+    31px 22px 15px 0 rgba(0, 0, 0, 0.04), 48px 35px 17px 0 rgba(0, 0, 0, 0);
+}
+
+h1 {
+  font-size: calc(7.993rem * 0.7);
+}
+
+h2 {
+  font-size: calc(5.653rem * 0.7);
+}
+
+h3 {
+  font-size: calc(3.998rem * 0.7);
+}
+
+h4 {
+  font-size: calc(2.827rem * 0.7);
+}
+h5 {
+  font-size: calc(1.999rem * 0.7);
+}
+h6 {
+  font-size: calc(1.414rem * 0.7);
+}
+
+p,
+a,
+button {
+  font-size: calc(1rem * 0.7);
+}
+
+small {
+  font-size: calc(0.707rem * 0.7);
+}
+
+body {
+  background-color: var(--color1);
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem;
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    .main-game-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      color: var(--color5);
+      width: 100%;
+      .colorcode-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color7);
+        padding: 4rem 2rem;
+        gap: 2rem;
+        box-shadow: var(--boxshadow1);
+        border-radius: 1.25rem;
+        .counts-container {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          h5 {
+            color: var(--color6);
+            span {
+              color: var(--color5);
+            }
+          }
+        }
+      }
+
+      .colors-container {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 4rem);
+        background-color: var(--color7);
+        padding: 3rem 2rem;
+        box-shadow: var(--boxshadow1);
+        border-radius: 1.25rem;
+        justify-content: center;
+
+        .colorbox {
+          height: 4rem;
+          border-radius: 20px;
+          background-color: var(--color5);
+        }
+      }
+    }
+
+    aside {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      background-color: var(--color7);
+      box-shadow: var(--boxshadow1);
+      border-radius: 1.25rem;
+      padding: 3rem 2rem;
+      width: 100%;
+
+      .btn-container {
+        .toggle-btn {
+          background-color: var(--color5);
+          padding: 1rem 2rem;
+          border-radius: 20px;
+          font-size: 2rem;
+        }
+      }
+
+      .modus-btn-container {
+        button {
+          padding: 1rem;
+          font-size: 1rem;
+          background-color: var(--color5);
+          border-radius: 10px;
+        }
+      }
+      .aside-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        color: var(--color5);
+
+        h3 {
+          color: var(--color6);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  body {
+    main {
+      .main-game-section {
+        .colors-container {
+          grid-template-columns: repeat(4, 5rem);
+          .colorbox {
+            height: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 7.993rem;
+  }
+
+  h2 {
+    font-size: 5.653rem;
+  }
+
+  h3 {
+    font-size: 3.998rem;
+  }
+
+  h4 {
+    font-size: 2.827rem;
+  }
+  h5 {
+    font-size: 1.999rem;
+  }
+  h6 {
+    font-size: 1.414rem;
+  }
+
+  p,
+  a,
+  button {
+    font-size: 1rem;
+  }
+
+  small {
+    font-size: 0.707rem;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 1.125rem;
+  }
+
+  body {
+    main {
+      flex-wrap: nowrap;
+      .main-game-section {
+        .colors-container {
+          grid-template-columns: repeat(4, 5rem);
+          .colorbox {
+            height: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 1.2rem;
+  }
+}

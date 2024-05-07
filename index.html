@@ -11,26 +11,17 @@
     <main>
       <section class="main-game-section">
         <div class="colorcode-container">
-          <h3>#FF33D4</h3>
-          <h5>00:30</h5>
+          <h3 id="hexcode">Start Game</h3>
+          <h5 class="countdown">00:00</h5>
           <div class="counts-container">
-            <h5>Round: <span>1</span></h5>
-            <h5><span>0</span> Points</h5>
+            <h5>Round: <span class="rounds">0</span></h5>
+            <h5><span class="points">0</span> Points</h5>
           </div>
         </div>
         <div class="colors-container">
-          <div class="colorbox"></div>
-          <div class="colorbox"></div>
-          <div class="colorbox"></div>
-          <div class="colorbox"></div>
-          <div class="colorbox"></div>
-          <div class="colorbox"></div>
-          <div class="colorbox"></div>
-          <div class="colorbox"></div>
-          <div class="colorbox"></div>
-          <div class="colorbox"></div>
-          <div class="colorbox"></div>
-          <div class="colorbox"></div>
+          <div class="colorbox" data-hex=""></div>
+          <div class="colorbox" data-hex=""></div>
+          <div class="colorbox" data-hex=""></div>
         </div>
       </section>
       <aside>
@@ -39,21 +30,15 @@
         </div>
         <div class="modus-container aside-cont">
           <h3>Modus</h3>
-          <div>
-            <h5>Easy</h5>
-            <h5>Medium</h5>
-            <h5>Hard</h5>
+          <div class="modus-btn-container">
+            <button class="modus-btn" data-modus="2">Easy</button>
+            <button class="modus-btn" data-modus="5">Medium</button>
+            <button class="modus-btn" data-modus="11">Hard</button>
           </div>
         </div>
         <div class="scoreboard-container aside-cont">
           <h3>Scoreboard</h3>
-          <div>
-            <h5>2467</h5>
-            <h5>2357</h5>
-            <h5>1237</h5>
-            <h5>589</h5>
-            <h5>365</h5>
-          </div>
+          <div id="score-container"></div>
         </div>
       </aside>
     </main>
